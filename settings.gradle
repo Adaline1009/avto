@@ -1,0 +1,5 @@
+rootProject.name = 'avto'
+
+gradle.ext.dbUrl = System.getProperty('hrms.db.url', 'jdbc:postgresql://localhost:5432/avto_test')
+gradle.ext.dbUser = System.getProperty('hrms.db.user', 'postgres')
+gradle.ext.dbPassword = System.getProperty('hrms.db.password', 'ada100986')

@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="PostgreSQL - avto_dev@localhost" uuid="7335f7ba-2f43-41cd-9f82-e92566641c0c">
+    <database-info product="PostgreSQL" version="9.6.5" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.1.4">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="POSTGRES" format-version="2.5">
+      <database id="1" name="postgres"/>
+      <database id="2" name="avto_dev"/>
+      <schema id="3" parent="1" name="public">
+        <object-id>2200</object-id>
+        <comment>standard public schema</comment>
+        <introspection-state-number>34953</introspection-state-number>
+        <introspection-timestamp>2018-08-12.12:57:35.451</introspection-timestamp>
+      </schema>
+      <schema id="4" parent="2" name="public">
+        <object-id>2200</object-id>
+        <comment>standard public schema</comment>
+        <introspection-state-number>670965</introspection-state-number>
+        <introspection-timestamp>2018-08-12.17:07:03.263</introspection-timestamp>
+      </schema>
+      <sequence id="5" parent="3" name="hibernate_sequence">
+        <object-id>24595</object-id>
+        <state-number>564</state-number>
+      </sequence>
+      <table id="6" parent="3" name="cat">
+        <object-id>24579</object-id>
+        <state-number>1528</state-number>
+      </table>
+      <table id="7" parent="3" name="department">
+        <object-id>24709</object-id>
+        <state-number>1530</state-number>
+      </table>
+      <table id="8" parent="3" name="employee">
+        <object-id>24714</object-id>
+        <state-number>1529</state-number>
+      </table>
+      <table id="9" parent="3" name="wf_card">
+        <object-id>113862</object-id>
+        <state-number>34953</state-number>
+      </table>
+      <table id="10" parent="4" name="advertisement">
+        <object-id>468753</object-id>
+        <state-number>670965</state-number>
+      </table>
+      <table id="11" parent="4" name="avto_marks">
+        <object-id>468721</object-id>
+        <state-number>670965</state-number>
+      </table>
+      <table id="12" parent="4" name="avto_models">
+        <object-id>468726</object-id>
+        <state-number>670965</state-number>
+      </table>
+      <table id="13" parent="4" name="avto_params">
+        <object-id>468732</object-id>
+        <state-number>670965</state-number>
+      </table>
+      <table id="14" parent="4" name="comment">
+        <object-id>468763</object-id>
+        <state-number>670965</state-number>
+      </table>
+      <table id="15" parent="4" name="flyway_schema_history">
+        <object-id>468710</object-id>
+        <state-number>670962</state-number>
+      </table>
+      <table id="16" parent="4" name="roles">
+        <object-id>468739</object-id>
+        <state-number>670965</state-number>
+      </table>
+      <table id="17" parent="4" name="table">
+        <object-id>468744</object-id>
+        <state-number>670965</state-number>
+      </table>
+      <table id="18" parent="4" name="usr">
+        <object-id>468747</object-id>
+        <state-number>670965</state-number>
+      </table>
+      <column id="19" parent="6" name="name">
+        <state-number>555</state-number>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="20" parent="6" name="age">
+        <state-number>555</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+      </column>
+      <column id="21" parent="7" name="department_id">
+        <state-number>657</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+      </column>
+      <column id="22" parent="7" name="date">
+        <state-number>657</state-number>
+        <data-type>timestamp</data-type>
+      </column>
+      <column id="23" parent="7" name="name">
+        <state-number>657</state-number>
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="24" parent="7" name="parent_id">
+        <state-number>657</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <index id="25" parent="7" name="department_pkey">
+        <object-id>24712</object-id>
+        <columns>department_id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="26" parent="7" name="uk_1t68827l97cwyxo9r1u6t4p7d">
+        <object-id>24722</object-id>
+        <columns>name</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="27" parent="7" name="department_pkey">
+        <columns>department_id</columns>
+        <underlying-index>department_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <key id="28" parent="7" name="uk_1t68827l97cwyxo9r1u6t4p7d">
+        <columns>name</columns>
+        <underlying-index>uk_1t68827l97cwyxo9r1u6t4p7d</underlying-index>
+      </key>
+      <foreign-key id="29" parent="7" name="fk_pckwqaicar1mpn27equblhqgh">
+        <columns>parent_id</columns>
+        <ref-key>department_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="30" parent="8" name="emp_id">
+        <state-number>658</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+      </column>
+      <column id="31" parent="8" name="date_of_dismissal">
+        <state-number>658</state-number>
+        <data-type>timestamp</data-type>
+      </column>
+      <column id="32" parent="8" name="employment_date">
+        <state-number>658</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+      </column>
+      <column id="33" parent="8" name="first_name">
+        <state-number>658</state-number>
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="34" parent="8" name="is_boss">
+        <state-number>658</state-number>
+        <mandatory>1</mandatory>
+        <data-type>boolean</data-type>
+      </column>
+      <column id="35" parent="8" name="last_name">
+        <state-number>658</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="36" parent="8" name="middle_name">
+        <state-number>658</state-number>
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="37" parent="8" name="position">
+        <state-number>658</state-number>
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="38" parent="8" name="salary">
+        <state-number>658</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+      </column>
+      <column id="39" parent="8" name="sex">
+        <state-number>658</state-number>
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="40" parent="8" name="dept_id">
+        <state-number>658</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+      </column>
+      <index id="41" parent="8" name="employee_pkey">
+        <object-id>24720</object-id>
+        <columns>emp_id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="42" parent="8" name="employee_pkey">
+        <columns>emp_id</columns>
+        <underlying-index>employee_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="43" parent="8" name="fk_jupc981pvryfs7lbgtpoy6mmh">
+        <columns>dept_id</columns>
+        <ref-key>~.department.department_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="44" parent="9" name="card_id">
+        <state-number>34953</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+      </column>
+      <index id="45" parent="9" name="wf_card_pkey">
+        <object-id>113865</object-id>
+        <columns>card_id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="46" parent="9" name="wf_card_pkey">
+        <columns>card_id</columns>
+        <underlying-index>wf_card_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <column id="47" parent="10" name="id">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>uuid</data-type>
+      </column>
+      <column id="48" parent="10" name="title">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="49" parent="10" name="description">
+        <state-number>670965</state-number>
+        <data-type>text</data-type>
+      </column>
+      <column id="50" parent="10" name="longitude">
+        <state-number>670965</state-number>
+        <data-type>real</data-type>
+      </column>
+      <column id="51" parent="10" name="latitude">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>real</data-type>
+      </column>
+      <column id="52" parent="10" name="price">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>real</data-type>
+      </column>
+      <column id="53" parent="10" name="start_date">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <column id="54" parent="10" name="is_active">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>boolean</data-type>
+      </column>
+      <column id="55" parent="10" name="city">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="56" parent="10" name="seller_id">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>uuid</data-type>
+      </column>
+      <column id="57" parent="10" name="params_id">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>uuid</data-type>
+      </column>
+      <index id="58" parent="10" name="pk_advertisement_id">
+        <object-id>468759</object-id>
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="59" parent="10" name="idx_advertisement_seller_id">
+        <object-id>468761</object-id>
+        <columns>seller_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="60" parent="10" name="idx_advertisement_params_id">
+        <object-id>468762</object-id>
+        <columns>params_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="61" parent="10" name="pk_advertisement_id">
+        <columns>id</columns>
+        <underlying-index>pk_advertisement_id</underlying-index>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="62" parent="10" name="fk_advertisement_usr_id">
+        <columns>seller_id</columns>
+        <ref-key>~.usr.pk_usr_id</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="63" parent="10" name="fk_advertisement_avto_params">
+        <columns>params_id</columns>
+        <ref-key>~.avto_params.pk_avto_params_id</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="64" parent="11" name="id">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>uuid</data-type>
+      </column>
+      <column id="65" parent="11" name="name">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <index id="66" parent="11" name="pk_mark_id">
+        <object-id>468724</object-id>
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="67" parent="11" name="pk_mark_id">
+        <columns>id</columns>
+        <underlying-index>pk_mark_id</underlying-index>
+        <primary>1</primary>
+      </key>
+      <column id="68" parent="12" name="id">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>uuid</data-type>
+      </column>
+      <column id="69" parent="12" name="name">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="70" parent="12" name="mark_id">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>uuid</data-type>
+      </column>
+      <index id="71" parent="12" name="pk_model_id">
+        <object-id>468729</object-id>
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="72" parent="12" name="idx_avto_models_mark_id">
+        <object-id>468731</object-id>
+        <columns>mark_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="73" parent="12" name="pk_model_id">
+        <columns>id</columns>
+        <underlying-index>pk_model_id</underlying-index>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="74" parent="12" name="fk_avto_models_avto_marks_id">
+        <columns>mark_id</columns>
+        <ref-key>~.avto_marks.pk_mark_id</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="75" parent="13" name="id">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>uuid</data-type>
+      </column>
+      <column id="76" parent="13" name="model_id">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>uuid</data-type>
+      </column>
+      <column id="77" parent="13" name="mark_id">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>uuid</data-type>
+      </column>
+      <column id="78" parent="13" name="year">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+      </column>
+      <column id="79" parent="13" name="distance">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>real</data-type>
+      </column>
+      <column id="80" parent="13" name="power">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+      </column>
+      <column id="81" parent="13" name="engine_volume">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>real</data-type>
+      </column>
+      <column id="82" parent="13" name="transmision">
+        <state-number>670965</state-number>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="83" parent="13" name="engine_type">
+        <state-number>670965</state-number>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <index id="84" parent="13" name="pk_avto_params_id">
+        <object-id>468735</object-id>
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="85" parent="13" name="idx_avto_params_model_id">
+        <object-id>468737</object-id>
+        <columns>model_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="86" parent="13" name="idx_avto_params_mark_id">
+        <object-id>468738</object-id>
+        <columns>mark_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="87" parent="13" name="pk_avto_params_id">
+        <columns>id</columns>
+        <underlying-index>pk_avto_params_id</underlying-index>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="88" parent="13" name="fk_avto_params_avto_models">
+        <columns>model_id</columns>
+        <ref-key>~.avto_models.pk_model_id</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="89" parent="13" name="fk_avto_params_avto_marks">
+        <columns>mark_id</columns>
+        <ref-key>~.avto_marks.pk_mark_id</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="90" parent="14" name="id">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>uuid</data-type>
+      </column>
+      <column id="91" parent="14" name="commentator_id">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>uuid</data-type>
+      </column>
+      <column id="92" parent="14" name="advertisement_id">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>uuid</data-type>
+      </column>
+      <column id="93" parent="14" name="comment_text">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <index id="94" parent="14" name="pk_cmment_id">
+        <object-id>468769</object-id>
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="95" parent="14" name="idx_comment_commentator_id">
+        <object-id>468771</object-id>
+        <columns>commentator_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="96" parent="14" name="idx_comment_advertisement_id">
+        <object-id>468772</object-id>
+        <columns>advertisement_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="97" parent="14" name="pk_cmment_id">
+        <columns>id</columns>
+        <underlying-index>pk_cmment_id</underlying-index>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="98" parent="14" name="fk_comment_commentator_id">
+        <columns>commentator_id</columns>
+        <ref-key>~.usr.pk_usr_id</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="99" parent="14" name="fk_comment_advertisement_id">
+        <columns>advertisement_id</columns>
+        <ref-key>~.advertisement.pk_advertisement_id</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="100" parent="15" name="installed_rank">
+        <state-number>670962</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+      </column>
+      <column id="101" parent="15" name="version">
+        <state-number>670962</state-number>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="102" parent="15" name="description">
+        <state-number>670962</state-number>
+        <mandatory>1</mandatory>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="103" parent="15" name="type">
+        <state-number>670962</state-number>
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="104" parent="15" name="script">
+        <state-number>670962</state-number>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1000)</data-type>
+      </column>
+      <column id="105" parent="15" name="checksum">
+        <state-number>670962</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <column id="106" parent="15" name="installed_by">
+        <state-number>670962</state-number>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="107" parent="15" name="installed_on">
+        <state-number>670962</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>now()</default-expression>
+      </column>
+      <column id="108" parent="15" name="execution_time">
+        <state-number>670962</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+      </column>
+      <column id="109" parent="15" name="success">
+        <state-number>670962</state-number>
+        <mandatory>1</mandatory>
+        <data-type>boolean</data-type>
+      </column>
+      <index id="110" parent="15" name="flyway_schema_history_pk">
+        <object-id>468717</object-id>
+        <columns>installed_rank</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="111" parent="15" name="flyway_schema_history_s_idx">
+        <object-id>468719</object-id>
+        <columns>success</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="112" parent="15" name="flyway_schema_history_pk">
+        <columns>installed_rank</columns>
+        <underlying-index>flyway_schema_history_pk</underlying-index>
+        <primary>1</primary>
+      </key>
+      <column id="113" parent="16" name="id">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>uuid</data-type>
+      </column>
+      <column id="114" parent="16" name="name">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <index id="115" parent="16" name="pk_roles_id">
+        <object-id>468742</object-id>
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="116" parent="16" name="pk_roles_id">
+        <columns>id</columns>
+        <underlying-index>pk_roles_id</underlying-index>
+        <primary>1</primary>
+      </key>
+      <column id="117" parent="18" name="id">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>uuid</data-type>
+      </column>
+      <column id="118" parent="18" name="name">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="119" parent="18" name="phone">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>varchar(25)</data-type>
+      </column>
+      <column id="120" parent="18" name="role_id">
+        <state-number>670965</state-number>
+        <mandatory>1</mandatory>
+        <data-type>uuid</data-type>
+      </column>
+      <index id="121" parent="18" name="pk_usr_id">
+        <object-id>468750</object-id>
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="122" parent="18" name="idx_usr_role_id">
+        <object-id>468752</object-id>
+        <columns>role_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="123" parent="18" name="pk_usr_id">
+        <columns>id</columns>
+        <underlying-index>pk_usr_id</underlying-index>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="124" parent="18" name="fk_usr_role_id">
+        <columns>role_id</columns>
+        <ref-key>~.roles.pk_roles_id</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+    </database-model>
+  </data-source>
+</component>

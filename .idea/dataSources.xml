@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2798391803">
+    <data-source source="LOCAL" name="PostgreSQL - avto_dev@localhost" uuid="7335f7ba-2f43-41cd-9f82-e92566641c0c">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/avto_dev</jdbc-url>
+    </data-source>
+  </component>
+</project>

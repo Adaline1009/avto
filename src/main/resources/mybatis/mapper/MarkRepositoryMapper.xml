@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="avto.repository.MarkRepository">
+    <resultMap type="avto.model.Mark" id="markMap">
+        <result typeHandler="ru.altarix.hrms.config.mybatis.handler.UUIDTypeHandler" column="id" property="id"/>
+        <result column="name" property="name"/>
+    </resultMap>
+    <select id="getAllCarsMarks" resultMap="markMap"> SELECT * FROM avto_marks; </select>
+</mapper>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!--
+    <typeHandlers>
+        <typeHandler handler="ru.altarix.hrms.avto.config.mybatis.handler.UUIDTypeHandler" javaType="java.util.UUID"/>
+    </typeHandlers>
+-->
+
+    <mappers>
+  <!--      <mapper resource="mybatis/mapper/EmployeeRepository.xml"/>
+        <mapper resource="mybatis/mapper/EmpInternalExperienceRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/EmpSkillRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/EmpLanguageRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/EmpEducationRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/EmpCourseRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/EmpExternalExperienceRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/CertificateRepositoryMapper.xml"/>
+
+
+        <mapper resource="mybatis/mapper/DepartmentRepository.xml"/>
+        <mapper resource="mybatis/mapper/CourseFormatRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/EducationTypeRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/GradeRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/LanguageRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/LanguageLevelRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/LocationRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/OfficeRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/PositionRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/ProjectRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/ProjectRoleRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/SeverityLevelRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/SkillLevelRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/SkillsRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/SkillCategoriesRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/SpecializationRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/RiskOfLeavingRepositoryMapper.xml"/>
+
+
+        <mapper resource="mybatis/mapper/asm/AsmTaskRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/asm/AsmTargetRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/asm/AsmCommentRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/asm/AsmGrowthTaskRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/asm/AsmGrowthTargetRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/asm/AsmPMFeedbackRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/asm/AsmLMFeedbackRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/asm/AsmHRFeedbackRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/asm/AsmGrowthLMManagerCommentRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/asm/AsmLMTargetCommentRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/asm/AsmEmployeeWishRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/asm/CompanyAssessmentRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/asm/AssessmentRepositoryMapper.xml"/>
+
+
+        <mapper resource="mybatis/mapper/asm/catalogs/AsmConditionsRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/asm/catalogs/AsmExecutedStatusRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/asm/catalogs/AsmExpertiseRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/asm/catalogs/AsmGrowthPlanResultRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/asm/catalogs/AsmPerformanceEvaluateRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/asm/catalogs/AsmPotentialRepositoryMapper.xml"/>
+        <mapper resource="mybatis/mapper/asm/catalogs/AsmTotalRepositoryMapper.xml"/>
+
+
+        <mapper resource="mybatis/mapper/SecurityRepositoryMapper.xml"/>-->
+    </mappers>
+</configuration>

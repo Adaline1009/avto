@@ -1,0 +1,16 @@
+server:
+  servlet:
+    context-path: /avto
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/avto_dev
+    username: postgres
+    password: ada100986
+
+rest:
+  prefix: /api
+
+app:
+   filestorage: /home/user/
