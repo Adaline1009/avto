@@ -21,6 +21,6 @@ public class Advertisement {
     private Date startDate;
     private Boolean isActive;
     private String city;
-    private User seller;
+    private UUID sellerId;
     private AvtoParams params;
 }

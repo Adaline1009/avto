@@ -38,14 +38,12 @@ CREATE TABLE roles (
 	CONSTRAINT pk_roles_id PRIMARY KEY ( id )
  );
 
-CREATE TABLE "table" (
- );
 
 CREATE TABLE usr (
 	id                   uuid  NOT NULL ,
 	name                 varchar(255)  NOT NULL ,
 	phone                varchar(25)  NOT NULL ,
-	role_id              uuid  NOT NULL ,
+	role_id              uuid  ,
 	CONSTRAINT pk_usr_id PRIMARY KEY ( id )
  );
 

@@ -24,5 +24,4 @@
 
     <select id="getAvtoParamsById" resultMap="avtoParamsMap"> SELECT * FROM avto_params p where p.id=#{id} ; </select>
 
-    <select id="getAvtoParamsById" resultMap="avtoParamsMap"> SELECT * FROM avto_params p where p.id=#{id} ; </select>
 </mapper>

@@ -3,11 +3,11 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-<!--
+
     <typeHandlers>
         <typeHandler handler="ru.altarix.hrms.avto.config.mybatis.handler.UUIDTypeHandler" javaType="java.util.UUID"/>
     </typeHandlers>
--->
+
 
     <mappers>
   <!--      <mapper resource="mybatis/mapper/EmployeeRepository.xml"/>
