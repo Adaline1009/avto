@@ -15,13 +15,13 @@ public interface AdvertisementRepository {
     List<Advertisement> getAdvertisementByUserId(@Param("id") UUID id);
 
     List<Advertisement> findByFilter(@Param(" minYearValue") Integer minYearValue,
-                                     @Param(" maxYearValue")Integer maxYearValue,
-                                     @Param(" minDistanceValue")Integer minDistanceValue,
-                                     @Param(" maxDistanceValue")Integer maxDistanceValue,
-                                     @Param(" minPowerValue")Integer minPowerValue,
-                                     @Param(" maxPowerValue")Integer maxPowerValue,
-                                     @Param(" minVolumeValue")Integer minVolumeValue,
-                                     @Param(" maxVolumeValue")Integer maxVolumeValue);
+                                     @Param(" maxYearValue") Integer maxYearValue,
+                                     @Param(" minDistanceValue") Integer minDistanceValue,
+                                     @Param(" maxDistanceValue") Integer maxDistanceValue,
+                                     @Param(" minPowerValue") Integer minPowerValue,
+                                     @Param(" maxPowerValue") Integer maxPowerValue,
+                                     @Param(" minVolumeValue") Integer minVolumeValue,
+                                     @Param(" maxVolumeValue") Integer maxVolumeValue);
 
     void createAdvertisement(@Param("adv") Advertisement advertisement);
 }

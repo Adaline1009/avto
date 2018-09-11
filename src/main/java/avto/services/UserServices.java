@@ -5,7 +5,6 @@ import avto.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
 import java.util.UUID;
 
 /**
@@ -14,11 +13,13 @@ import java.util.UUID;
 @Component
 public class UserServices {
     @Autowired
-    private  UserRepository userRepository;
-    public User getUserById(UUID id){
-        return  userRepository.getUserById(id);
+    private UserRepository userRepository;
+
+    public User getUserById(UUID id) {
+        return userRepository.getUserById(id);
     }
-    public void createUser(User user){
+
+    public void createUser(User user) {
         user.setId(UUID.randomUUID());
         userRepository.createUser(user);
     }

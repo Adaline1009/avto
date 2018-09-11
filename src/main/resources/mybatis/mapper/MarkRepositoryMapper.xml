@@ -5,7 +5,7 @@
 
 <mapper namespace="avto.repository.MarkRepository">
     <resultMap type="avto.model.Mark" id="markMap">
-        <result typeHandler="ru.altarix.hrms.config.mybatis.handler.UUIDTypeHandler" column="id" property="id"/>
+        <result typeHandler="avto.config.mybatis.handler.UUIDTypeHandler" column="id" property="id"/>
         <result column="name" property="name"/>
     </resultMap>
     <select id="getAllCarsMarks" resultMap="markMap"> SELECT * FROM avto_marks; </select>

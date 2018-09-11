@@ -7,8 +7,10 @@ import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 import org.springframework.core.io.Resource;
 
@@ -17,16 +19,16 @@ import javax.sql.DataSource;
 /**
  * @author Evgeny Generalov
  */
-@EnableConfigurationProperties
-@MapperScan(
-        sqlSessionFactoryRef = "sqlSessionFactory"
-)
+
+@Configuration
+@EnableAutoConfiguration
+@MapperScan("avto.repository")
 public class DatabaseConfiguration {
 
     @Autowired
     private Environment env;
 
-    @Value("classpath:avto.config/mybatis-avto.config.xml")
+    @Value("classpath:config/mybatis-config.xml")
     private Resource mybatisResource;
 
     @Bean(destroyMethod = "close")

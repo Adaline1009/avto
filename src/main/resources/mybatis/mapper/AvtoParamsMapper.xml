@@ -5,7 +5,7 @@
 
 <mapper namespace="avto.repository.AutoParamsRepository">
     <resultMap type="avto.model.AvtoParams" id="avtoParamsMap">
-        <result typeHandler="ru.altarix.hrms.config.mybatis.handler.UUIDTypeHandler" column="id" property="id"/>
+        <result typeHandler="avto.config.mybatis.handler.UUIDTypeHandler" column="id" property="id"/>
         <result property="year" column="year"/>
         <result property="distance" column="distance"/>
         <result property="engineVolume" column="engine_volume"/>
@@ -13,11 +13,11 @@
         <result property="transmission" column="transmission"/>
         <result property="engineType" column="engine_type"/>
         <association column="mark_id" property="mark" javaType="avto.model.Mark">
-            <result property="id" column="mark_id" typeHandler="ru.altarix.hrms.config.mybatis.handler.UUIDTypeHandler"/>
+            <result property="id" column="mark_id" typeHandler="avto.config.mybatis.handler.UUIDTypeHandler"/>
             <result property="name" column="mark_name"/>
         </association>
         <association column="model_id" property="model" javaType="avto.model.Model">
-            <result property="id" column="model_id" typeHandler="ru.altarix.hrms.config.mybatis.handler.UUIDTypeHandler"/>
+            <result property="id" column="model_id" typeHandler="avto.config.mybatis.handler.UUIDTypeHandler"/>
             <result property="name" column="model_name"/>
         </association>
     </resultMap>

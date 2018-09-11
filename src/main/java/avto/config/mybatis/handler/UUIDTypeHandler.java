@@ -1,4 +1,4 @@
-package ru.altarix.hrms.config.mybatis.handler;
+package avto.config.mybatis.handler;
 
 import org.apache.ibatis.type.BaseTypeHandler;
 import org.apache.ibatis.type.JdbcType;

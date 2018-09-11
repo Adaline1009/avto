@@ -5,7 +5,7 @@
 
 <mapper namespace="avto.repository.AdvertisementRepository">
     <resultMap type="avto.model.Advertisement" id="advMap">
-        <result typeHandler="ru.altarix.hrms.config.mybatis.handler.UUIDTypeHandler" column="id" property="id"/>
+        <result typeHandler="avto.config.mybatis.handler.UUIDTypeHandler" column="id" property="id"/>
         <result property="type" column="type"/>
         <result property="title" column="title"/>
         <result property="description" column="description"/>
@@ -15,12 +15,12 @@
         <result property="startDate" column="start_date"/>
         <result property="isActive" column="is_active"/>
         <result property="city" column="city"/>
-        <result property="sellerId" column="seller_id"/>
+        <result property="sellerId" typeHandler="avto.config.mybatis.handler.UUIDTypeHandler" column="seller_id"/>
         <association property="params" resultMap="avtoParamsMap"/>
     </resultMap>
 
     <resultMap type="avto.model.AvtoParams" id="avtoParamsMap">
-        <result typeHandler="ru.altarix.hrms.config.mybatis.handler.UUIDTypeHandler" column="params_id" property="id"/>
+        <result typeHandler="avto.config.mybatis.handler.UUIDTypeHandler" column="params_id" property="id"/>
         <result property="year" column="year"/>
         <result property="distance" column="distance"/>
         <result property="power" column="power"/>
@@ -28,12 +28,12 @@
         <result property="transmission" column="transmission"/>
         <result property="engineType" column="engine_type"/>
         <association column="mark_id" javaType="avto.model.Mark" property="mark">
-            <result typeHandler="ru.altarix.hrms.config.mybatis.handler.UUIDTypeHandler" column="mark_id"
+            <result typeHandler="avto.config.mybatis.handler.UUIDTypeHandler" column="mark_id"
                     property="id"/>
             <result column="mark_name" property="name"/>
         </association>
         <association column="model_id" javaType="avto.model.Model" property="model">
-            <result typeHandler="ru.altarix.hrms.config.mybatis.handler.UUIDTypeHandler" column="model_id"
+            <result typeHandler="avto.config.mybatis.handler.UUIDTypeHandler" column="model_id"
                     property="id"/>
             <result column="model_name" property="name"/>
         </association>
@@ -43,7 +43,7 @@
         SELECT  adv.*,
         ap.id as params_id, ap.year, ap.distance, ap.power,ap.engine_volume,ap.transmission,ap.engine_type,
         amrk.id as mark_id, amrk.name as mark_name,
-        amdl.id as model_id, amdl.name as model_name;
+        amdl.id as model_id, amdl.name as model_name
         FROM advertisement adv
         INNER  JOIN avto_params ap ON adv.params_id =ap.id
         INNER  JOIN avto_marks amrk ON  ap.mark_id=amrk.id
