@@ -8,6 +8,6 @@ public class Testing {
 
     }
     public void sayDay(){
-
+int i=0;
     }
 }
